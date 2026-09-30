@@ -1,0 +1,11 @@
+operation,x,y,expected
+add,10,5,15
+add,-3,3,0
+subtract,10,5,5
+subtract,0,7,-7
+multiply,4,5,20
+multiply,-2,6,-12
+divide,20,4,5
+divide,7,2,3.5
+power,2,10,1024
+power,9,0.5,3
