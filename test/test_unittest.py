@@ -31,6 +31,10 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.power(2, 3), 8)
         self.assertEqual(calculator.power(5, 0), 1)
 
+    def test_combined(self):
+        self.assertEqual(calculator.combined(2, 3), 10)
+        self.assertEqual(calculator.combined(-1, -1), -1)
+
     def test_average(self):
         self.assertEqual(calculator.average([1, 2, 3]), 2)
         self.assertEqual(calculator.average([1, 2]), 1.5)

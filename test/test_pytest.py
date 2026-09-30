@@ -59,6 +59,16 @@ def test_power(x, y, expected):
     assert calculator.power(x, y) == expected
 
 
+@pytest.mark.parametrize("x, y, expected", [
+    (2, 3, 10),      # 5 + (-1) + 6
+    (5, 0, 10),      # 5 + 5 + 0
+    (-1, 1, -3),     # 0 + (-2) + (-1)
+    (-1, -1, -1),    # -2 + 0 + 1
+])
+def test_combined(x, y, expected):
+    assert calculator.combined(x, y) == expected
+
+
 @pytest.mark.parametrize("numbers, expected", [
     ([1, 2, 3], 2),
     ([10], 10),
@@ -87,6 +97,7 @@ def test_average_empty_list():
     calculator.multiply,
     calculator.divide,
     calculator.power,
+    calculator.combined,
 ])
 def test_non_number_input(func):
     with pytest.raises(ValueError):

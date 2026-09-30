@@ -63,6 +63,15 @@ def power(x, y):
     return x ** y
 
 
+def combined(x, y):
+    """
+    Combines the results of add, subtract and multiply.
+    Returns:
+        int/float: (x + y) + (x - y) + (x * y)
+    """
+    return add(x, y) + subtract(x, y) + multiply(x, y)
+
+
 def average(numbers):
     """
     Calculates the average of a list of numbers.
